@@ -46,9 +46,9 @@ class ProductManager {
   };
 }
 
-const persona1 = new ProductManager();
+const persona = new ProductManager();
 
-persona1.addProduct("pizza", "description", 5, "thumbnail", 5, 5);
-persona1.addProduct("plaza", "coco", 5, "thumbnail", 5, 5);
+persona.addProduct("pizza", "description", 5, "thumbnail", 5, 5);
+persona.addProduct("empandas", "descriptione", 1, "thumbnails", 10,15);
 
-console.log(persona1.getProducts());
+console.log(persona.getProducts());
