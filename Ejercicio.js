@@ -1,5 +1,4 @@
 class ProductManager {
-
   constructor() {
     this.products = [];
   }
@@ -18,14 +17,19 @@ class ProductManager {
       stock,
     };
 
+    const ProductCode = this.products.find((p) => p.code === product.code);
 
-    const validationCode = this.products.find(
-      (product) => product.code === code
-    );
-
-    if (validationCode) {
+    if (
+      !product.title ||
+      !product.description ||
+      !product.price ||
+      !product.thumbnail ||
+      !product.code ||
+      !product.stock
+    ) {
+      console.error("Todos los campos son obligatorios.");
+    } else if (ProductCode) {
       console.error("Ya existe un producto con el mismo código.");
-      return;
     } else {
       if (this.products.length === 0) {
         product.id = 1;
@@ -40,7 +44,7 @@ class ProductManager {
   getProductById = (id) => {
     const ProductId = this.products.find((p) => p.id === id);
     if (!ProductId) {
-      console.error("Producto no encontrado.");
+      console.error("Not found");
     }
     return ProductId;
   };
@@ -49,6 +53,6 @@ class ProductManager {
 const persona = new ProductManager();
 
 persona.addProduct("pizza", "description", 5, "thumbnail", 5, 5);
-persona.addProduct("empandas", "descriptione", 1, "thumbnails", 10,15);
+
 
 console.log(persona.getProducts());
