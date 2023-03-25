@@ -47,10 +47,10 @@ class ProductManager {
   getProductById = (id) => {
     const ProductId = this.products
            .find(p => p.id === id);
-    if (ProductId === -1) {
-      console.error("Not found");
+    if (!ProductId) {
+      console.error("Not found product with id");
     }
-    return ProductId;
+    return console.log(ProductId);;
   };
 }
 
