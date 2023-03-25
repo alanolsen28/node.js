@@ -46,9 +46,8 @@ class ProductManager {
 
   getProductById = (id) => {
     const ProductId = this.products
-           .findIndex(p => p.id === id);
-
-    if (!ProductId) {
+           .find(p => p.id === id);
+    if (ProductId === -1) {
       console.error("Not found");
     }
     return ProductId;
