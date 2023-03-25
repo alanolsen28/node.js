@@ -37,12 +37,17 @@ class ProductManager {
         product.id = this.products[this.products.length - 1].id + 1;
       }
 
+
+
       this.products.push(product);
     }
   };
 
+
   getProductById = (id) => {
-    const ProductId = this.products.find((p) => p.id === id);
+    const ProductId = this.products
+           .findIndex(p => p.id === id);
+
     if (!ProductId) {
       console.error("Not found");
     }
@@ -50,9 +55,17 @@ class ProductManager {
   };
 }
 
-const persona = new ProductManager();
+const product = new ProductManager();
 
-persona.addProduct("pizza", "description", 5, "thumbnail", 5, 5);
+console.log(product.getProducts());
 
+product.addProduct("producto prueba", "Este es un producto prueba", 200, "Sin imagen", "abc123", 25);
 
-console.log(persona.getProducts());
+product.addProduct("producto prueba2", "Este es un producto prueba", 200, "Sin imagen", "abc124", 25);
+
+product.addProduct("producto prueba3", "Este es un producto prueba", 200, "Sin imagen", "abc124", 25);
+
+console.log(product.getProducts());
+
+console.log(product.getProductById(2));
+
