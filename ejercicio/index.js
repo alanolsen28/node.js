@@ -1,13 +1,11 @@
-import path from "path";
 import ProductManager from "./managers/ProductManager.js";
 
-const manager = new ProductManager(path);
+const manager = new ProductManager('./files/Usuarios.json');
 
 const env = async () => {
 
-try {
 
-  const productos = await manager.getProducts();
+const productos = await manager.getProducts(path);
 
   console.log(productos);
 
@@ -22,21 +20,15 @@ try {
     };
   };
 
+   await manager.createUser(user);
+
   const result = await manager.createProduct(producto);
 
   const ProdResult = await manager.getProducts();
 
   console.log(ProdResult);
 
-
-  
-} catch (error) {
-   
-  console.log(error);
-}
-
 };
 
-env();
+env()
 
-product.addProduct("producto prueba", "Este es un producto prueba", 200, "Sin imagen", "abc123", 25);
