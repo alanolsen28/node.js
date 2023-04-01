@@ -71,17 +71,18 @@ export default class ProductManager {
   };
 
 
-  // updateProduct = (id) => {
-  //   const ProductId = this.products.find(p => p.id === id);
-  //   if (!ProductId || ProductId === undefined) {
-  //     return console.log("Not found product with id");
-  //   } else {
-  //         console.log(ProductId);;
-  //   }
-  //   return ProductId;
-  // };
+  updateProduct = (id) => {
+   const ProductId = this.products.find(p => p.id === id);
+   if (!ProductId || ProductId === undefined) {
+      return console.log("Not found product with id");
+    } else {
+        console.log(...ProductId);;
+     }
+    return ProductId;
+   };
 
 }
-const product = new ProductManager();
+
+
 
 

@@ -28,6 +28,7 @@ try {
 
   console.log(ProdResult);
 
+
   
 } catch (error) {
    
@@ -37,3 +38,5 @@ try {
 };
 
 env();
+
+product.addProduct("producto prueba", "Este es un producto prueba", 200, "Sin imagen", "abc123", 25);
