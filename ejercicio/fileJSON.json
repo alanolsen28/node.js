@@ -1,0 +1,38 @@
+[
+	{
+		"title": "alfajor",
+		"description": "chocolate",
+		"price": 300,
+		"thumbnail": "sin imagen",
+		"code": "abc12345",
+		"stock": 20,
+		"id": 1
+	},
+	{
+		"title": "alfajor",
+		"description": "vainilla",
+		"price": 250,
+		"thumbnail": "sin imagen",
+		"code": "abc12346",
+		"stock": 30,
+		"id": 2
+	},
+	{
+		"title": "cocacola",
+		"description": "comun",
+		"price": 350,
+		"thumbnail": "sin imagen",
+		"code": "abc1234567",
+		"stock": 15,
+		"id": 3
+	},
+	{
+		"title": "papitas",
+		"description": "crocantes",
+		"price": 500,
+		"thumbnail": "sin imagen",
+		"code": "abc1234678",
+		"stock": 25,
+		"id": 4
+	}
+]
