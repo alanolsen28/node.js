@@ -120,13 +120,15 @@ export default class ProductManager {
 
 const manager = new ProductManager('./fileJSON.json')
 
+
+
 console.log(await manager.getProducts())
-
-await manager.addProduct('torta', 'dulcedeleche', 100, 'sin imagen', 'abc123', 10)
-await manager.addProduct('torta', 'chocolate', 150, 'sin imagen', 'abc1234', 20)
-await manager.addProduct('fanta', 'comun', 200, 'sin imagen', 'abc12345', 30)
-await manager.addProduct('papas', 'crocantes', 300, 'sin imagen', 'abc123456', 40)
-
+await manager.addProduct('torta', 'dulcedeleche', 100, 'not image', 'abc123', 10)
+await manager.addProduct('torta', 'chocolate', 150, 'not image', 'abc1234', 20)
+await manager.addProduct('fanta', 'comun', 200, 'not image', 'abc12345', 30)
+await manager.addProduct('papas', 'crocantes', 300, 'not image', 'abc123456', 40)
 console.log(await manager.getProducts())
 console.log(await manager.getProductById(2))
-
+await manager.deleteProduct(2)
+await manager.deleteProduct(3)
+await manager.addProduct('galletitas', 'don satur GRASA', 300, 'sin imagen', 'abc12346789', 25)
